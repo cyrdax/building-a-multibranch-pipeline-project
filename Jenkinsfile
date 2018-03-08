@@ -6,12 +6,12 @@ pipeline {
         }
     }
     environment {
+        'npm_config_cache=npm-cache',
         CI = 'true'
     }
     stages {
         stage('Build') {
             steps {
-                sh 'npm_config_cache=npm-cache',
                 sh 'npm install'
             }
         }
