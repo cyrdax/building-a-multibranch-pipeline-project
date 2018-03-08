@@ -11,7 +11,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo npm install'
+                sh 'npm_config_cache=npm-cache',
+                sh 'npm install'
             }
         }
         stage('Test') {
