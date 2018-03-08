@@ -6,7 +6,7 @@ pipeline {
         }
     }
     environment {
-        'npm_config_cache=npm-cache',
+        'npm_config_cache=npm-cache'
         CI = 'true'
     }
     stages {
